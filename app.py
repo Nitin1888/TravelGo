@@ -15,9 +15,9 @@ REGION = 'us-east-1'  # Replace with your actual AWS region
 dynamodb = boto3.resource('dynamodb', region_name=REGION)
 sns_client = boto3.client('sns', region_name=REGION)
 
-users_table = dynamodb.Table('travelgo_users')
-trains_table = dynamodb.Table('trains') # Note: This table is declared but not used in the provided routes.
-bookings_table = dynamodb.Table('bookings')
+users_table = dynamodb.Table('travelgo_user')
+trains_table = dynamodb.Table('train') # Note: This table is declared but not used in the provided routes.
+bookings_table = dynamodb.Table('booking')
 
 SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:120569613040:Travelgo:04ebbc6d-670e-4678-821e-1153aeb84cc3'  # Replace with actual SNS topic ARN
 
